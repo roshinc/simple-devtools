@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
-    <h1>Extension Panel</h1>
-    <div id="output"></div>
+    <div class="header">
+      <span id="tab-info">Tab Information: </span>
+      <span id="page-url">Page URL: </span>
+    </div>
+    <div id="uploads-container">
+      <!-- Dynamic 'anUpload' sections will be appended here -->
+    </div>
     <script src="panel.js"></script>
   </body>
 </html>

@@ -4,12 +4,11 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getTabId" && sender.tab) {
     sendResponse({ tabId: sender.tab.id });
-  } else if (request.action === "input" && sender.tab) {
+  } else if (request.action === "upload" && sender.tab) {
     chrome.runtime.sendMessage({
-      text: request.text,
-      category: request.category,
+      fileMetadata: request.fileMetadata,
       tabId: sender.tab.id,
     });
   }
-  return true; // Indicate that responses are asynchronous
+  return true;
 });
