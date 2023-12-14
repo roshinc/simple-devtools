@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Simple DevTools Extension",
+    "version": "1.0",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "devtools_page": "devtools.html"
+}
